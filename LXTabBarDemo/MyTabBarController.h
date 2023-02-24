@@ -1,15 +1,15 @@
 //
-//  ViewController.h
+//  MyTabBarController.h
 //  LXTabBarDemo
 //
 //  Created by lixuepeng on 2023/2/24.
 //
 
-#import <UIKit/UIKit.h>
+#import "LXTabBarController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ViewController : UIViewController
+@interface MyTabBarController : LXTabBarController
 
 @end
 

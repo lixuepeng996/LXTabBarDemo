@@ -8,27 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		D53BC4F029A85C18008E6A88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D53BC4EF29A85C18008E6A88 /* AppDelegate.m */; };
-		D53BC4F329A85C18008E6A88 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D53BC4F229A85C18008E6A88 /* SceneDelegate.m */; };
-		D53BC4F629A85C18008E6A88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53BC4F529A85C18008E6A88 /* ViewController.m */; };
-		D53BC4F929A85C18008E6A88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53BC4F729A85C18008E6A88 /* Main.storyboard */; };
 		D53BC4FB29A85C19008E6A88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53BC4FA29A85C19008E6A88 /* Assets.xcassets */; };
 		D53BC4FE29A85C19008E6A88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53BC4FC29A85C19008E6A88 /* LaunchScreen.storyboard */; };
 		D53BC50129A85C19008E6A88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D53BC50029A85C19008E6A88 /* main.m */; };
+		D53BC50E29A85C31008E6A88 /* LXTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D53BC50829A85C31008E6A88 /* LXTabBarItem.m */; };
+		D53BC50F29A85C31008E6A88 /* LXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53BC50C29A85C31008E6A88 /* LXTabBarController.m */; };
+		D53BC51029A85C31008E6A88 /* LXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D53BC50D29A85C31008E6A88 /* LXTabBar.m */; };
+		D53BC51329A85C6D008E6A88 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53BC51229A85C6D008E6A88 /* CoreFoundation.framework */; };
+		D53BC51529A85C72008E6A88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53BC51429A85C72008E6A88 /* UIKit.framework */; };
+		D53BC51829A85CDA008E6A88 /* UIButton+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = D53BC51629A85CDA008E6A88 /* UIButton+Layout.m */; };
+		D53BC51B29A85F10008E6A88 /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53BC51A29A85F10008E6A88 /* MyTabBarController.m */; };
+		D53BC51E29A85F45008E6A88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53BC51D29A85F45008E6A88 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D53BC4EB29A85C18008E6A88 /* LXTabBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXTabBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53BC4EE29A85C18008E6A88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D53BC4EF29A85C18008E6A88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D53BC4F129A85C18008E6A88 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		D53BC4F229A85C18008E6A88 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		D53BC4F429A85C18008E6A88 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D53BC4F529A85C18008E6A88 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D53BC4F829A85C18008E6A88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D53BC4FA29A85C19008E6A88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D53BC4FD29A85C19008E6A88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D53BC4FF29A85C19008E6A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D53BC50029A85C19008E6A88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D53BC50829A85C31008E6A88 /* LXTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBarItem.m; sourceTree = "<group>"; };
+		D53BC50929A85C31008E6A88 /* LXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBar.h; sourceTree = "<group>"; };
+		D53BC50A29A85C31008E6A88 /* LXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBarController.h; sourceTree = "<group>"; };
+		D53BC50B29A85C31008E6A88 /* LXTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBarItem.h; sourceTree = "<group>"; };
+		D53BC50C29A85C31008E6A88 /* LXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBarController.m; sourceTree = "<group>"; };
+		D53BC50D29A85C31008E6A88 /* LXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBar.m; sourceTree = "<group>"; };
+		D53BC51229A85C6D008E6A88 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		D53BC51429A85C72008E6A88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D53BC51629A85CDA008E6A88 /* UIButton+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Layout.m"; sourceTree = "<group>"; };
+		D53BC51729A85CDA008E6A88 /* UIButton+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Layout.h"; sourceTree = "<group>"; };
+		D53BC51929A85F10008E6A88 /* MyTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTabBarController.h; sourceTree = "<group>"; };
+		D53BC51A29A85F10008E6A88 /* MyTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTabBarController.m; sourceTree = "<group>"; };
+		D53BC51C29A85F45008E6A88 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D53BC51D29A85F45008E6A88 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53BC51329A85C6D008E6A88 /* CoreFoundation.framework in Frameworks */,
+				D53BC51529A85C72008E6A88 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +63,7 @@
 			children = (
 				D53BC4ED29A85C18008E6A88 /* LXTabBarDemo */,
 				D53BC4EC29A85C18008E6A88 /* Products */,
+				D53BC51129A85C6C008E6A88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,19 +78,43 @@
 		D53BC4ED29A85C18008E6A88 /* LXTabBarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D53BC50729A85C31008E6A88 /* LXTabBarController */,
 				D53BC4EE29A85C18008E6A88 /* AppDelegate.h */,
 				D53BC4EF29A85C18008E6A88 /* AppDelegate.m */,
-				D53BC4F129A85C18008E6A88 /* SceneDelegate.h */,
-				D53BC4F229A85C18008E6A88 /* SceneDelegate.m */,
-				D53BC4F429A85C18008E6A88 /* ViewController.h */,
-				D53BC4F529A85C18008E6A88 /* ViewController.m */,
-				D53BC4F729A85C18008E6A88 /* Main.storyboard */,
+				D53BC51929A85F10008E6A88 /* MyTabBarController.h */,
+				D53BC51A29A85F10008E6A88 /* MyTabBarController.m */,
+				D53BC51C29A85F45008E6A88 /* ViewController.h */,
+				D53BC51D29A85F45008E6A88 /* ViewController.m */,
 				D53BC4FA29A85C19008E6A88 /* Assets.xcassets */,
 				D53BC4FC29A85C19008E6A88 /* LaunchScreen.storyboard */,
 				D53BC4FF29A85C19008E6A88 /* Info.plist */,
 				D53BC50029A85C19008E6A88 /* main.m */,
 			);
 			path = LXTabBarDemo;
+			sourceTree = "<group>";
+		};
+		D53BC50729A85C31008E6A88 /* LXTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				D53BC50929A85C31008E6A88 /* LXTabBar.h */,
+				D53BC50D29A85C31008E6A88 /* LXTabBar.m */,
+				D53BC50A29A85C31008E6A88 /* LXTabBarController.h */,
+				D53BC50C29A85C31008E6A88 /* LXTabBarController.m */,
+				D53BC50B29A85C31008E6A88 /* LXTabBarItem.h */,
+				D53BC50829A85C31008E6A88 /* LXTabBarItem.m */,
+				D53BC51729A85CDA008E6A88 /* UIButton+Layout.h */,
+				D53BC51629A85CDA008E6A88 /* UIButton+Layout.m */,
+			);
+			path = LXTabBarController;
+			sourceTree = "<group>";
+		};
+		D53BC51129A85C6C008E6A88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D53BC51429A85C72008E6A88 /* UIKit.framework */,
+				D53BC51229A85C6D008E6A88 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +176,6 @@
 			files = (
 				D53BC4FE29A85C19008E6A88 /* LaunchScreen.storyboard in Resources */,
 				D53BC4FB29A85C19008E6A88 /* Assets.xcassets in Resources */,
-				D53BC4F929A85C18008E6A88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,24 +186,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D53BC4F629A85C18008E6A88 /* ViewController.m in Sources */,
+				D53BC51029A85C31008E6A88 /* LXTabBar.m in Sources */,
 				D53BC4F029A85C18008E6A88 /* AppDelegate.m in Sources */,
+				D53BC51E29A85F45008E6A88 /* ViewController.m in Sources */,
 				D53BC50129A85C19008E6A88 /* main.m in Sources */,
-				D53BC4F329A85C18008E6A88 /* SceneDelegate.m in Sources */,
+				D53BC50E29A85C31008E6A88 /* LXTabBarItem.m in Sources */,
+				D53BC50F29A85C31008E6A88 /* LXTabBarController.m in Sources */,
+				D53BC51B29A85F10008E6A88 /* MyTabBarController.m in Sources */,
+				D53BC51829A85CDA008E6A88 /* UIButton+Layout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D53BC4F729A85C18008E6A88 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D53BC4F829A85C18008E6A88 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D53BC4FC29A85C19008E6A88 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +332,6 @@
 				INFOPLIST_FILE = LXTabBarDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +357,6 @@
 				INFOPLIST_FILE = LXTabBarDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
