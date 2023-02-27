@@ -12,6 +12,7 @@
 @property(nonatomic,strong) UIPageViewController *pageViewController;
 @property(nonatomic,strong) NSMutableArray <LXTabBarItem *>*items;
 @property(nonatomic,copy) NSMutableArray<__kindof UIViewController *> *currentViewControlles;
+@property(nonatomic,copy) NSMutableArray<__kindof UIViewController *> *navRootViewControlles; // 获取导航栏根视图 iOS14及以上poptoroot时nav.viewControllers在willshow中获取第一个视图不是根视图
 @end
 
 @implementation LXTabBarController
@@ -34,6 +35,13 @@
     return _currentViewControlles;
 }
 
+-(NSMutableArray *)navRootViewControlles {
+    if(!_navRootViewControlles) {
+        _navRootViewControlles = [NSMutableArray new];
+    }
+    return _navRootViewControlles;
+}
+
 
 -(UIPageViewController *)pageViewController {
     if(!_pageViewController) {
@@ -51,11 +59,6 @@
         _tabBar.translatesAutoresizingMaskIntoConstraints = NO;
     }
     return _tabBar;
-}
-
--(void)setSelectedIndex:(NSUInteger)selectedIndex {
-    _selectedIndex = selectedIndex;
-    [self changeTabToIndex:selectedIndex];
 }
 
 - (void)viewDidLoad {
@@ -79,7 +82,14 @@
 #pragma mark- LXTabBarDelegate
 -(void)tabBar:(LXTabBar *)tabBar didSelectItem:(LXTabBarItem *)item {
     NSInteger index = [tabBar.items indexOfObject:item];
-    self.selectedIndex = index;
+    
+    if(self.selectedIndex != index && index < self.viewControllers.count) {
+        self.selectedIndex = index;
+        [self.pageViewController setViewControllers:@[self.viewControllers[index]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:^(BOOL finished) {
+            
+        }];
+        self.selectedViewController = self.viewControllers[index];
+    }
 }
 
 -(void)addChildViewController:(UIViewController *)childController title:(NSString*)title normalImage:(UIImage *)normalImage selectedImage:(UIImage *)selectedImage {
@@ -90,32 +100,43 @@
     [self.items addObject:item];
     self.tabBar.items = self.items;
     if (self.viewControllers.count == 1) {
-        self.selectedIndex = 0;
-    }
-    
-    if([childController isKindOfClass:[UINavigationController class]]) {
-        UINavigationController *nav = (UINavigationController *)childController;
-        nav.delegate = self;
-    }
-}
-
-#pragma mark- UINavigationControllerDelegate
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if(navigationController && navigationController.viewControllers.count > 0 && viewController == navigationController.viewControllers.firstObject) {
-        self.tabBar.hidden = NO;
-    } else {
-        self.tabBar.hidden = YES;
-    }
-}
-#pragma mark- UIPageViewControllerTools
--(void)changeTabToIndex:(NSInteger)index {
-    if (index < self.viewControllers.count) {
-        UIViewController *childController = self.viewControllers[index];
         [self.pageViewController setViewControllers:@[childController] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:^(BOOL finished) {
             
         }];
      self.selectedViewController = childController;
     }
+    if([childController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *nav = (UINavigationController *)childController;
+        nav.delegate = self;
+        if(nav.viewControllers.count > 0) {
+            [self.navRootViewControlles addObject:nav.viewControllers.firstObject];
+        }
+    }
+}
+
+#pragma mark- UINavigationControllerDelegate
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    UIViewController *firstVC = navigationController.viewControllers.firstObject;
+    if(self.selectedIndex < self.navRootViewControlles.count) {
+        firstVC = self.navRootViewControlles[self.selectedIndex];
+    }
+    if(navigationController && navigationController.viewControllers.count > 0 && viewController == firstVC) {
+        self.tabBar.hidden = NO;
+    } else {
+        self.tabBar.hidden = YES;
+    }
+}
+
+#pragma mark- UIPageViewControllerTools
+-(UIViewController *)viewControllerAtIndex:(NSInteger)index {
+    if(!self.viewControllers || self.viewControllers.count == 0 || index >= self.viewControllers.count){
+        return nil;
+    }
+    return self.viewControllers[index];
+}
+
+- (NSUInteger)indexOfViewController:(UIViewController *)viewController {
+    return [self.viewControllers indexOfObject:viewController];
 }
 #pragma mark-Tools
 + (CGFloat)vg_safedistanceBottom {
